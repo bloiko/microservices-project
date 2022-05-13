@@ -1,35 +1,35 @@
 version: '3'
 services:
-#  zipkin:
-#    image: openzipkin/zipkin
-#    ports:
-#      - "9411:9411"
-#  graphite:
-#    image: graphiteapp/graphite-statsd
-#    ports:
-#      - "2003:2003"
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+  graphite:
+    image: graphiteapp/graphite-statsd
+    ports:
+      - "2003:2003"
   discovery:
     image: myapp:latest
     build: ./platform-services/discovery
     ports:
       - "8087:8087"
-#  apigateway:
-#   # build: ./platform-services/apigateway
-##    ports:
-##      - "8089:8089"
-#    links:
-#      - discovery
-#  one:
-#   # build: ./business-services/one
-#    links:
-#      - apigateway
-##      - zipkin
-##      - graphite
-##      - discovery
-#  two:
-#   # build: ./business-services/two
-#    links:
-#      - one
-##      - zipkin
-##      - graphite
-##      - discovery
+  apigateway:
+    build: ./platform-services/apigateway
+    ports:
+      - "8089:8089"
+    links:
+      - discovery
+  one:
+    build: ./business-services/one
+    links:
+      - apigateway
+      - zipkin
+      - graphite
+      - discovery
+  two:
+    build: ./business-services/two
+    links:
+      - one
+      - zipkin
+      - graphite
+      - discovery
