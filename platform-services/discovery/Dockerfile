@@ -15,5 +15,5 @@ FROM maven:3.6.0-jdk-8-alpine as build
 VOLUME /tmp
 COPY target/discovery*.jar discovery.jar
 # Run the jar file
-EXPOSE 8087 8087
+EXPOSE 8761 8761
 ENTRYPOINT ["java","-jar","/discovery.jar"]

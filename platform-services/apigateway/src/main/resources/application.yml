@@ -7,3 +7,7 @@ zuul:
   routes:
     products:
       url: http://localhost:8089/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/

@@ -25,26 +25,12 @@
             <artifactId>spring-boot-starter</artifactId>
             <version>2.6.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
+
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-            <version>3.1.1</version>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign &ndash;&gt;
-                <dependency>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-feign</artifactId>
-                    <version>1.4.7.RELEASE</version>
-                </dependency>
-
-                &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client &ndash;&gt;
-                <dependency>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-                    <version>3.1.1</version>
-                </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
